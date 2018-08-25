@@ -7,7 +7,7 @@ A small framework for localization within Unity (or other C# applications)
 * Renaming a key with `autoGenerateLanguageClass` turned on will cause compiler errors. To get around this, either refactor/rename the key in code before updating the .csv, or do a bulk *find and replace*.
 
 ## To add translations
-1. Open the localization config `Config -> Localization`
+1. Open the localization config `Config -> Localization` from the menu at the top of the Unity editor
 2. Add any .csv files with translations you wish to include to the list
 
 Translations should have a key colum as the first column, each following column should be decorated with the code for the language (ie. en for english). You can also provide a country code (ie. en-US) for greater control over translations within a single language.
@@ -48,7 +48,7 @@ localstring translatedText = new localstring("{YOUR KEY HERE}", arg0, arg1 ... a
 ```
 
 ## Setting Locale
-To set the current language, you have a few options, you can either use Unity's inbuilt `SystemLanguage`, or use the iso code for the language and (optionally) country:
+To set the current language, you have a few options, you can either use Unity's inbuilt `SystemLanguage`, or use the iso code for the language and (optionally) country. If selecting a precise locale with no corresponding entries in the translation files, it will fall back to the imprecise locale (ie. if set to *en-GB*, and no column labeled *en-GB* is not present, returned translations will instead be from the column labeled *en*, if available)
 ```cs
 Localization.SetLanguage(SystemLanguage.English); // Unity SystemLanguage (Not Precise)
 Localization.SetLanguage("en"); // Language Only (Not Precise)
