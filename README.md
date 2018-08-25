@@ -48,7 +48,7 @@ localstring translatedText = new localstring("{YOUR KEY HERE}", arg0, arg1 ... a
 ```
 
 ## Setting Locale
-To set the current language, you have a few options, you can either use Unity's inbuilt `SystemLanguage`, or use the iso code for the language and (optionally) country. If selecting a precise locale with no corresponding entries in the translation files, it will fall back to the imprecise locale (ie. if set to *en-GB*, and no column labeled *en-GB* is not present, returned translations will instead be from the column labeled *en*, if available)
+To set the current language, you have a few options, you can either use Unity's inbuilt `SystemLanguage`, or use the iso code for the language and (optionally) country. If selecting a precise locale with no corresponding entries in the translation files, it will fall back to the imprecise locale (ie. if set to *en-GB*, and no column labeled *en-GB* is present, returned translations will instead be from the column labeled *en*, if available)
 ```cs
 Localization.SetLanguage(SystemLanguage.English); // Unity SystemLanguage (Not Precise)
 Localization.SetLanguage("en"); // Language Only (Not Precise)
