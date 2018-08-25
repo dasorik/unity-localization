@@ -13,8 +13,9 @@ A small framework for localization within Unity (or other C# applications)
 Translations should have a key colum as the first column, each following column should be decorated with the code for the language (ie. en for english). You can also provide a country code (ie. en-US) for greater control over translations within a single language.
 
 Your translation file might look something like this:
-key | en | en-AU | fr | de | es
-general.greeting | Hello | G'Day | Arrière | Zurück | Espalda
+| key | en | en-AU | fr | de | es |
+| --- | --- | --- | --- | --- | --- |
+| general.greeting | Hello | G'Day | Arrière | Zurück | Espalda |
 
 ## Placeholder Values
 Any text you place inside curly braces (ie. `{name}`) will be considered a placeholder value. Placeholders will be filled in when creating a translated string.  You can have as many placeholder values as you like, and placeholder values with the same name will be considered the same for population purposes *see below for usage*
