@@ -2,9 +2,9 @@
 A small framework for localization within Unity (or other C# applications)
 
 ## Known Limitations
-* Plurals (ie. 'Apple'/'Apples') are not currently handled by the system. Support for this will be added later.
+* Plurals (ie. *Apple*/*Apples*) are not currently handled by the system. Support for this will be added later.
 * Localization of units (Imperial/Metric) is not handled (also to be supported later)
-* Renaming a key with `autoGenerateLanguageClass` turned on will cause compiler errors. To get around this, either refactor/rename the key in code before updating the .csv, or do a bulk find a replace.
+* Renaming a key with `autoGenerateLanguageClass` turned on will cause compiler errors. To get around this, either refactor/rename the key in code before updating the .csv, or do a bulk *find and replace*.
 
 ## To add translations
 1. Open the localization config `Config -> Localization`
@@ -19,7 +19,7 @@ Your translation file might look something like this:
 | general.greeting | Hello | G'Day | Arrière | Zurück | Espalda |
 
 ## Placeholder Values
-Any text you place inside curly braces (ie. `{name}`) will be considered a placeholder value. Placeholders will be filled in when creating a translated string.  You can have as many placeholder values as you like, and placeholder values with the same name will be considered the same for population purposes *see below for usage*
+Any text you place inside curly braces (ie. `{name}`) will be considered a placeholder value. Placeholders will be filled in when creating a translated string.  You can have as many placeholder values as you like, and placeholder values with the same name will be considered the same for population purposes. *see below for usage*
 
 ## Using Translated Text
 To use translated text, you'll be using the `localstring` class. This acts as a container for a key/argument pair, and will resolve to an actual translated string when needed.
@@ -32,7 +32,7 @@ localstring simpleText = keys.general.back;
 Debug.Log(simpleText); // 'Back'
 ```
 
-If the text has placeholder values, then you will need to provide the values for each unique value. You can also provide a localstring as a parameter, it will be recursively translated before being converted to a string.
+If the text has placeholder values, then you will need to provide the values for each unique value. You can also provide a `localstring` as a parameter, it will be recursively translated before being converted to a string.
 ```cs
 localstring greetingText = keys.greetings.personal(name: "Tony"); // 'Hello {name}, how are you'
 Debug.Log(greetingText); // 'Hello Tony, how are you?'
