@@ -13,6 +13,7 @@ A small framework for localization within Unity (or other C# applications)
 Translations should have a key colum as the first column, each following column should be decorated with the code for the language (ie. en for english). You can also provide a country code (ie. en-US) for greater control over translations within a single language.
 
 Your translation file might look something like this:
+
 | key | en | en-AU | fr | de | es |
 | --- | --- | --- | --- | --- | --- |
 | general.greeting | Hello | G'Day | Arrière | Zurück | Espalda |
