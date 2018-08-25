@@ -1,4 +1,4 @@
-# unity-localization
+# unity-localization :earth_americas:
 A small framework for localization within Unity (or other C# applications)
 
 ## Known Limitations
@@ -15,7 +15,7 @@ Translations should have a key colum as the first column, each following column 
 Your translation file might look something like this:
 
 | key | en | en-AU | fr | de | es |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- | :--- | :--- |
 | general.greeting | Hello | G'Day | Arrière | Zurück | Espalda |
 
 ## Placeholder Values
