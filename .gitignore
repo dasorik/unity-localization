@@ -34,3 +34,9 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+# Generated Files
+Assets/Generated/
+Assets/Resources/Config
+Assets/Generated.meta
+Assets/Resources/Config.meta
